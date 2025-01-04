@@ -4,7 +4,7 @@
 echo "Entered SPAN_PORT value: $SPAN_PORT"
 
 # Create or overwrite the docker-compose.yml file
-cat <<EOF | tee /root/docker/suricata/docker-compose.yml
+cat <<EOF | tee /opt/sensor/conf/etc/capture/blusapphire.yaml
 
 %YAML 1.1
 ---
