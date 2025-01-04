@@ -1,10 +1,17 @@
 #!/bin/bash
 
+# Validate SPAN_PORT is set
+if [ -z "$SPAN_PORT" ]; then
+  echo "Error: SPAN_PORT is not set. Please export SPAN_PORT and retry."
+  exit 1
+fi
+
 # Echo the entered SPAN_PORT value
 echo "Entered SPAN_PORT value: $SPAN_PORT"
 
 # Create or overwrite the docker-compose.yml file
-cat <<EOF | tee /opt/sensor/conf/etc/capture/blusapphire.yaml
+cat <<EOF | tee /opt/sensor/conf/etc/capture/blusapphire.yaml > /dev/null
+
 
 %YAML 1.1
 ---
@@ -528,5 +535,10 @@ coredump:
 
 EOF
 
-# Notify the user
-echo "Configuration successfully written to /opt/sensor/conf/etc/capture/blusapphire.yaml"
+# Check if the file was created successfully
+if [ $? -eq 0 ]; then
+  echo "Configuration successfully written to /opt/sensor/conf/etc/capture/blusapphire.yaml"
+else
+  echo "Error: Failed to write configuration."
+  exit 1
+fi
