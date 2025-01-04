@@ -1,3 +1,6 @@
 # suricata
 
-curl -sSL  https://github.com/farooq-001/suricata/blob/master/install-suricata.sh | bash
+echo 'export SPAN_PORT=enX0' >> ~/.bashrc
+source ~/.bashrc
+
+curl -sSL https://raw.githubusercontent.com/farooq-001/suricata/master/install-suricata.sh | bash
