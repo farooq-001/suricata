@@ -3,6 +3,9 @@
 # Prompt for SPAN_PORT
 read -p "Enter SPAN_PORT: " SPAN_PORT
 
+# Echo the entered SPAN_PORT value
+echo "SPAN_PORT is set to: $SPAN_PORT"
+
 # Create necessary directories
 mkdir -p /root/docker/suricata
 
