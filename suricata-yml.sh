@@ -529,4 +529,4 @@ coredump:
 EOF
 
 # Notify the user
-echo "Configuration successfully written to /root/docker/suricata/docker-compose.yml"
+echo "Configuration successfully written to /opt/sensor/conf/etc/capture/blusapphire.yaml"
