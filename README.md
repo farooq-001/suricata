@@ -10,7 +10,8 @@ wget https://prod1-us.blusapphire.net/export/idsrules/idsrules.tar.gz -P /opt/se
 
 tar -zxvf /opt/sensor/conf/etc/capture/idsrules.tar.gz -C /opt/sensor/conf/etc/capture/
 
-curl -sSL https://raw.githubusercontent.com/farooq-001/suricata/master/suricata-yml.sh | bash
+curl -sSL https://raw.githubusercontent.com/farooq-001/suricata/master/yml.sh | bash
+
 
 
 
