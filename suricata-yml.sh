@@ -111,7 +111,7 @@ magic-file: /usr/share/misc/magic
 
 # netmap support
 #netmap:
-# - interface:$SPAN_PORT
+# - interface: $SPAN_PORT
    #   threads: auto
 # - interface: default
 af-packet:
