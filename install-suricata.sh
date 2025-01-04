@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Prompt for SPAN_PORT
-read -p "Enter SPAN_PORT: " SPAN_PORT
+# Check if SPAN_PORT is set and not empty
+if [ -z "$SPAN_PORT" ]; then
+    # Prompt for SPAN_PORT if not set
+    read -p "Enter SPAN_PORT: " SPAN_PORT
+fi
 
 # Echo the entered SPAN_PORT value
 echo "SPAN_PORT is set to: $SPAN_PORT"
